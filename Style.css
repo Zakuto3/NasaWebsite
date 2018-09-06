@@ -1,6 +1,7 @@
 
 body{
-	background: black;
+	background: white;
+	box-sizing: border-box;
 }
 
 #content{
@@ -70,35 +71,29 @@ body{
 	font-size: 15px;
 }
 
+
+.wrapper{
+	 display: grid; 
+ 	 grid-template-columns: repeat(4, 1fr); 
+ 	 grid-auto-rows: 280px; 
+ 	 grid-gap: 6px;
+}
+
 .imgs {
 	width: 100%; 
 	height: 100%;
 }
 
-.div-head{
-	overflow: hidden;
-
+.cell1{
+	grid-column-start: 1; 
+  	grid-column-end: 5; 
+ 	grid-row-start: 1; 
+  	grid-row-end: 1;
 }
 
-.div-1-cell{
-	display: block; 
-	height: 325px;
-	width: 322px; 
-	float: left;
-	padding: 6px 4px 2px 4px;
-}
-
-.div-2-cell{
-	display: block; 
-	height: 325px;
-	width: 652px; 
-	float: left;
-	padding: 6px 4px 2px 4px;
-}
-.div-4-cell{
-	display: block; 
-	height: 325px;
-	width: 1312px; 
-	float: left;
-	padding: 6px 4px 2px 4px;
+.cell2{
+	grid-column-start: 2; 
+  	grid-column-end: 4; 
+ 	grid-row-start: 3; 
+  	grid-row-end: 3;
 }
