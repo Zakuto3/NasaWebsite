@@ -4,7 +4,7 @@ body{
 }
 
 #content{
-	margin: 0 15%;
+	margin: 0% 15%;
 }
 
 #main-header{
@@ -51,6 +51,7 @@ body{
 
 .div-head{
 	overflow: hidden;
+
 }
 
 .div-1-cell{
