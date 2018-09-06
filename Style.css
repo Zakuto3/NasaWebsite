@@ -8,17 +8,42 @@ body{
 }
 
 #main-header{
+	position: relative;
 	height: 120px;
 	background-image: url('Images/starwars.jpg');
 }
 
+#search-text{
+	display: inline-block;
+	position: absolute;
+	right: 4%;
+    top: 4%;
+}
+
+#search-btn{
+	position: absolute;
+    float: right;
+    display: inline-block;
+    right: 4%;
+    top: 4%;
+}
+
+#share-btn{
+	position: absolute;
+    float: right;
+    display: inline-block;
+    right: 1%;
+    top: 4%;
+}
+
 .big-header{
 	color: white;
-	font-family: Arial;
-	font-size: 2.5em;
-	position: absolute;
-	right: 25%;
-	padding: 0 5px;
+    font-family: Arial;
+    font-size: 2.5em;
+    position: absolute;
+    display: inline-block;
+    padding: 0 5px;
+    right: 25%;
 }
 
 .big-header-text{
@@ -28,14 +53,15 @@ body{
 }
 
 .small-header{
-	color: white;
-	font-family: Arial;
-	font-size: 1.5em;
-	position: absolute;
-	right: 25%;
-	top: 9%;
-	background: #525252;
-	padding: 0px 20px 6px 20px;
+    color: white;
+    font-family: Arial;
+    display: inline-block;
+    font-size: 1.5em;
+    bottom: 0px;
+    position: absolute;
+    background: #525252;
+    padding: 0px 20px 6px 20px;
+    margin: 0 40px;
 }
 
 .small-header-text{
