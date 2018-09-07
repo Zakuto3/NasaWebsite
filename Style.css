@@ -1,6 +1,6 @@
 
 body{
-	background: white;
+	background: black;
 	box-sizing: border-box;
 }
 
@@ -12,7 +12,9 @@ body{
 	margin-bottom: 6px;
 	position: relative;
 	height: 120px;
-	background-image: url('Images/starwars.jpg');
+	background-image: url('Images/header-img.jpg');
+	background-size: cover;
+	background-position: left;
 }
 
 #search-text{
@@ -41,7 +43,7 @@ body{
 .big-header{
 	color: white;
     font-family: Arial;
-    font-size: 2.5em;
+    font-size: 36px;
     position: absolute;
     display: inline-block;
     padding: 0 5px;
@@ -58,7 +60,7 @@ body{
     color: white;
     font-family: Arial;
     display: inline-block;
-    font-size: 1.5em;
+    font-size: 25px;
     bottom: 0px;
     position: absolute;
     background: #525252;
@@ -98,4 +100,9 @@ body{
   	grid-column-end: 4; 
  	grid-row-start: 3; 
   	grid-row-end: 3;
+}
+
+#logo{
+	height: 120px;
+	width: 120px;
 }
