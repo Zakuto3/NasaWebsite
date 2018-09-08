@@ -32,10 +32,10 @@ body{
 
 #search-btn{
 	position: absolute;
-    float: right;
     display: inline-block;
-    right: 4%;
-    top: 4%;
+    right: 5%;
+    top: 8%;
+    height: 20%;
 }
 
 #share-btn{
