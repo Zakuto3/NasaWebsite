@@ -105,35 +105,40 @@ body{
     position: relative;
 }
 
+.cell-text{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	font-weight: 500;
+	font-family: fantasy;
+}
+
 .title{
- background: dodgerblue;
-    position: absolute;
-    font-size: 25px;
-    opacity: 0.8;
-    bottom: 22.5%;
-    padding: 0px 3% 0px 5%;
+ 	background: dodgerblue;
+    font-size: 22px;
+    opacity: 0.7;
+    float: left;
+ 	clear: left;
 }
 
 .article-text{
     background: white;
-    position: absolute;
+    font-size: 20px;
     color: black;
-    display: inline-block;
-    font-size: 24px;
-    bottom: 0px;
     opacity: .7;
-    padding: 0px 6% 3px 22%;
+ 	width: 100%;
+    float: left;
+  	clear: left;
+
 }
 
 .promoted-article-text{
-    background: white;
-    position: absolute;
+	background: white;
+    font-size: 34px;
     color: black;
-    display: inline-block;
-    font-size: 30px;
-    bottom: 30px;
-    opacity: .5;
-    margin: 0% 0% 0.2% 5.1%;
+    opacity: .7;
+    float: left;
+  	clear: left;
 }
 
 #logo{
