@@ -11,7 +11,7 @@ body{
 #main-header{
 	margin-bottom: 6px;
 	position: relative;
-	height: 120px;
+	height: 105px;
 	background-image: url('Images/header-img.jpg');
 	background-size: cover;
 	background-position: left;
@@ -20,12 +20,12 @@ body{
 #search-text{
 	display: inline-block;
 	position: absolute;
-	right: 4%;
+	right: 9%;
     top: 4%;
     background: #333333;
     border-radius: 3px;
     border-color: black;
-    height: 30px;
+    height: 40px;
     color: white;
     text-indent: 10px;
 }
@@ -33,17 +33,17 @@ body{
 #search-btn{
 	position: absolute;
     display: inline-block;
-    right: 5%;
-    top: 8%;
-    height: 20%;
+    right: 10%;
+    top: 13%;
+    height: 25%;
 }
 
 #share-btn{
 	position: absolute;
     display: inline-block;
-    right: 1%;
-    top: 8%;
-    height: 20%;
+    right: 6%;
+    top: 13%;
+    height: 25%;
 }
 
 .big-header{
@@ -53,7 +53,7 @@ body{
     position: absolute;
     display: inline-block;
     padding: 0 5px;
-    right: 25%;
+    right: 23%;
 }
 
 .big-header-text{
@@ -68,11 +68,11 @@ body{
     display: inline-block;
     font-size: 25px;
     bottom: 0px;
+    width: 67%;
     position: absolute;
     background: #525252;
-    padding: 0px 20px 6px 4.5%;
-    right: 10%;
-    left: 10%;
+    padding: 0px 10px 5px 16px;
+    right: 17%;
 }
 
 .small-header-text{
@@ -137,6 +137,6 @@ body{
 }
 
 #logo{
-	height: 120px;
-	width: 120px;
+	height: 105px;
+	width: 115px;
 }
