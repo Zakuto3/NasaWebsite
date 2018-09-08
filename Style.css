@@ -22,6 +22,12 @@ body{
 	position: absolute;
 	right: 4%;
     top: 4%;
+    background: #333333;
+    border-radius: 3px;
+    border-color: black;
+    height: 30px;
+    color: white;
+    text-indent: 10px;
 }
 
 #search-btn{
