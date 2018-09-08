@@ -40,10 +40,10 @@ body{
 
 #share-btn{
 	position: absolute;
-    float: right;
     display: inline-block;
     right: 1%;
-    top: 4%;
+    top: 8%;
+    height: 20%;
 }
 
 .big-header{
