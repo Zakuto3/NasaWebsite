@@ -269,3 +269,13 @@ body{
 	height: 105px;
 	width: 115px;
 }
+
+.announcement{
+	position: absolute;
+	font-weight: 500;
+	font-family: fantasy;
+	background-color: #6a6aff;
+    width: 100%;
+    height: 100%;
+    float: left;
+}
