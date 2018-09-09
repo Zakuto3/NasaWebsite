@@ -93,6 +93,19 @@ body{
 	height: 100%;
 }
 
+.images-text-next {
+    width: 50%; 
+    height: 100%;
+}
+
+.triangle {
+    position: absolute;
+    right: 50%;
+    top: 36%;
+    border: 35px solid transparent;
+    border-right: 50px solid white;
+}
+
 .size-4-cell{
     grid-column: span 4;	
 }
@@ -101,7 +114,7 @@ body{
     grid-column: span 2;
 }
 
- .wrapper div{
+.wrapper div{
     position: relative;
 }
 
@@ -139,6 +152,32 @@ body{
     opacity: .7;
     float: left;
   	clear: left;
+}
+
+.text-beside-image{
+    background-color: white;
+    width: 46.7%;
+    height: 100%;
+    float: right;
+    padding: 0 1.65%;
+}
+
+.text-beside-image h3{
+    color: #5bafec;
+    font-family: Helvetica, Arial;
+}
+
+.text-beside-image a{
+    color: #5bafec;
+    font-family: Helvetica, Arial;
+}
+
+.text-beside-image p{
+    font-family: Helvetica, Arial;
+}
+
+.blue-text{
+    color: #5bafec;
 }
 
 #logo{
