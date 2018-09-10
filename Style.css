@@ -1,7 +1,6 @@
 
 body{
 	background: black;
-	box-sizing: border-box;
 }
 
 #content{
@@ -120,7 +119,7 @@ body{
 
 .woofer-cell{
     font-family: Helvetica, Arial;
-    background-color: #05122fc4;
+    background-color: #3c4965;
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -245,23 +244,14 @@ body{
     height: 100%;
     float: right;
     padding: 0 1.65%;
+    font-family: Helvetica, Arial;
 }
 
 .text-beside-image h3{
     color: #5bafec;
-    font-family: Helvetica, Arial;
 }
 
 .text-beside-image a{
-    color: #5bafec;
-    font-family: Helvetica, Arial;
-}
-
-.text-beside-image p{
-    font-family: Helvetica, Arial;
-}
-
-.blue-text{
     color: #5bafec;
 }
 
@@ -272,10 +262,12 @@ body{
 
 .announcement{
 	position: absolute;
-	font-weight: 500;
 	font-family: fantasy;
-	background-color: #6a6aff;
+	background-color: #8599dc;
     width: 100%;
     height: 100%;
-    float: left;
+}
+
+.announcement p{
+    padding: 0 4%;
 }
