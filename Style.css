@@ -1,7 +1,6 @@
 
 body{
 	background: black;
-	box-sizing: border-box;
 }
 
 #content{
@@ -107,6 +106,7 @@ body{
 }
 
 .size-4-cell{
+    overflow: hidden;
     grid-column: span 4;	
 }
 
@@ -118,9 +118,24 @@ body{
     position: relative;
 }
 
+#slide-1{
+    display: block;
+    height: 100%;
+}
+
+#slide-2{
+    display: none;
+    height: 100%;
+}
+
+#slide-3{
+    display: none;
+    height: 100%;
+}
+
 .woofer-cell{
     font-family: Helvetica, Arial;
-    background-color: #05122fc4;
+    background-color: #3c4965;
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -227,7 +242,6 @@ body{
  	width: 100%;
     float: left;
   	clear: left;
-
 }
 
 .promoted-article-text{
@@ -245,23 +259,14 @@ body{
     height: 100%;
     float: right;
     padding: 0 1.65%;
+    font-family: Helvetica, Arial;
 }
 
 .text-beside-image h3{
     color: #5bafec;
-    font-family: Helvetica, Arial;
 }
 
 .text-beside-image a{
-    color: #5bafec;
-    font-family: Helvetica, Arial;
-}
-
-.text-beside-image p{
-    font-family: Helvetica, Arial;
-}
-
-.blue-text{
     color: #5bafec;
 }
 
@@ -269,3 +274,33 @@ body{
 	height: 105px;
 	width: 115px;
 }
+
+.announcement{
+	position: absolute;
+	font-family: fantasy;
+	background-color: #8599dc;
+    width: 100%;
+    height: 100%;
+}
+
+.announcement p{
+    padding: 0 4%;
+}
+
+span.article-text:hover .article-text-flow{
+    display: block;
+}
+
+.article-text-flow{
+    display: none;
+    background: white;
+    font-size: 15px;
+    color: black;
+    opacity: 1;
+    width: 95%;
+    float: left;
+    clear: left;
+    margin: 0;
+    font-family: Helvetica, Arial;
+    padding: 9% 2.5%;
+} 
