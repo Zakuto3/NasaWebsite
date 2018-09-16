@@ -118,19 +118,33 @@ body{
     position: relative;
 }
 
-#slide-1{
-    display: block;
-    height: 100%;
+#scroll-slide{
+    position: absolute;
 }
 
-#slide-2{
-    display: none;
+.slide-show{
     height: 100%;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    opacity: 1;
+    transition: all 1s ease;
 }
 
-#slide-3{
-    display: none;
+.slide-close{
     height: 100%;
+    width: 0px;
+    padding-left: 100%;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.slide-closed{
+    height: 100%;
+    width: 0px;
+    padding-left: 0px;
+    padding-right: 100%;
+    opacity: 0;
 }
 
 .woofer-cell{
