@@ -1,0 +1,324 @@
+
+body{
+	background: black;
+}
+
+#content{
+	margin: 0% 15%;
+}
+
+#main-header{
+	margin-bottom: 6px;
+	position: relative;
+	height: 105px;
+	background-image: url('Images/header-img.jpg');
+	background-size: cover;
+	background-position: left;
+}
+
+#search-text{
+	display: inline-block;
+	position: absolute;
+	right: 9%;
+    top: 4%;
+    background: #333333;
+    border-radius: 3px;
+    border-color: black;
+    height: 40px;
+    color: white;
+    text-indent: 10px;
+}
+
+#search-btn{
+	position: absolute;
+    display: inline-block;
+    right: 10%;
+    top: 13%;
+    height: 25%;
+}
+
+#share-btn{
+	position: absolute;
+    display: inline-block;
+    right: 6%;
+    top: 13%;
+    height: 25%;
+}
+
+.big-header{
+	color: white;
+    font-family: Arial;
+    font-size: 36px;
+    position: absolute;
+    display: inline-block;
+    padding: 0 5px;
+    right: 23%;
+}
+
+.big-header-text{
+	color: white;
+	font-family: Arial;
+	font-size: 20px;
+}
+
+.small-header{
+    color: white;
+    font-family: Arial;
+    display: inline-block;
+    font-size: 25px;
+    bottom: 0px;
+    width: 67%;
+    position: absolute;
+    background: #525252;
+    padding: 0px 10px 5px 16px;
+    right: 17%;
+}
+
+.small-header-text{
+	color: white;
+	font-family: Arial;
+	font-size: 14px;
+}
+
+
+.wrapper{
+	 display: grid; 
+ 	 grid-auto-rows: 280px; 
+ 	 grid-gap: 6px;
+}
+
+.images {
+	width: 100%; 
+	height: 100%;
+}
+
+.images-text-next {
+    width: 50%; 
+    height: 100%;
+}
+
+.triangle {
+    position: absolute;
+    right: 50%;
+    top: 36%;
+    border: 35px solid transparent;
+    border-right: 50px solid white;
+}
+
+.size-4-cell{
+    overflow: hidden;
+    grid-column: span 4;	
+}
+
+.size-2-cell{
+    grid-column: span 2;
+}
+
+.wrapper div{
+    position: relative;
+}
+
+#scroll-slide{
+    position: absolute;
+}
+
+.slide-show{
+    height: 100%;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+    opacity: 1;
+    transition: all 1s ease;
+}
+
+.slide-close{
+    height: 100%;
+    width: 0px;
+    padding-left: 100%;
+    opacity: 0;
+    transition: all 1s ease;
+}
+
+.slide-closed{
+    height: 100%;
+    width: 0px;
+    padding-left: 0px;
+    padding-right: 100%;
+    opacity: 0;
+}
+
+.woofer-cell{
+    font-family: Helvetica, Arial;
+    background-color: #3c4965;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.woofer-cell h3{
+    position: absolute;
+    color: white;
+    top: 3%;
+    text-indent: 3%;
+    padding-bottom: 2%;
+    width: 100%;
+    border-bottom: 1px solid whitesmoke;
+    margin: 0;
+}
+
+.woofer-cell p{
+    position: absolute;
+    color: white;
+    top: 48%;
+    padding-left: 4%;
+    width: 92%;
+}
+
+.woofer-cell a{
+    color: #5bafec;
+}
+
+.woofer-cell h3 b{
+    font-size: 28px;
+}
+
+.woofer-cell p img {
+    width: 100%;
+    margin-top: 3%;
+}
+
+#rewoofed-logo{
+    height: 20px;
+    width: 20px;
+    float: left;
+    margin-right: 5px;
+}
+
+#rewoof-logo{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    right: 6%;
+}
+
+#pink-logo{
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+}
+
+#check-logo{
+    width: 20px;
+    position: absolute;
+}
+
+#woofer-rewoof-title{
+    position: absolute;
+    top: 21%;
+    left: 3%;
+    color: white;
+    width: 100%;
+    font-family: Helvetica, Arial;
+}
+
+.woofer-user{
+    position: absolute;
+    top: 28%;
+    color: white;
+    padding-top: 10px;
+    padding-left: 50px;
+    left: 4%;
+    font-family: Helvetica, Arial;
+}
+
+.cell-text{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	font-weight: 500;
+	font-family: fantasy;
+}
+
+.title{
+ 	background: dodgerblue;
+    font-size: 22px;
+    opacity: 0.7;
+    float: left;
+ 	clear: left;
+}
+
+.article-text{
+    background: white;
+    font-size: 20px;
+    color: black;
+    opacity: .7;
+ 	width: 100%;
+    float: left;
+  	clear: left;
+}
+
+.promoted-article-text{
+	background: white;
+    font-size: 34px;
+    color: black;
+    opacity: .7;
+    float: left;
+  	clear: left;
+}
+
+.text-beside-image{
+    background-color: white;
+    width: 46.7%;
+    height: 100%;
+    float: right;
+    padding: 0 1.65%;
+    font-family: Helvetica, Arial;
+}
+
+.text-beside-image h3{
+    color: #5bafec;
+}
+
+.text-beside-image a{
+    color: #5bafec;
+}
+
+#logo{
+	height: 105px;
+	width: 115px;
+}
+
+.announcement{
+	position: absolute;
+	font-family: fantasy;
+	background-color: #8599dc;
+    width: 100%;
+    height: 100%;
+}
+
+.announcement p{
+    padding: 0 4%;
+}
+
+span.article-text:hover .article-text-flow{
+    opacity: 1;
+    padding: 6% 2.5%;
+    height: 150px;
+    transition: all 1s ease;
+}
+
+.article-text-flow{
+    transition: all 1s ease;
+    background: white;
+    font-size: 15px;
+    color: black;
+    opacity: 0;
+    width: 90%;
+    height: 0px;/*
+    float: left;
+    clear: left;*/
+    margin: 0;
+    font-family: Helvetica, Arial;
+    /*padding: 0px;*/
+} 
