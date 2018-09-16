@@ -302,19 +302,23 @@ body{
 }
 
 span.article-text:hover .article-text-flow{
-    display: block;
+    opacity: 1;
+    padding: 6% 2.5%;
+    height: 150px;
+    transition: all 1s ease;
 }
 
 .article-text-flow{
-    display: none;
+    transition: all 1s ease;
     background: white;
     font-size: 15px;
     color: black;
-    opacity: 1;
-    width: 95%;
+    opacity: 0;
+    width: 90%;
+    height: 0px;/*
     float: left;
-    clear: left;
+    clear: left;*/
     margin: 0;
     font-family: Helvetica, Arial;
-    padding: 9% 2.5%;
+    /*padding: 0px;*/
 } 
