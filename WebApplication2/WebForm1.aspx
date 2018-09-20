@@ -9,7 +9,6 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <body>
 		<div id="content">
 			<div id='main-header'>
 				
@@ -17,6 +16,7 @@
 				<input id="search-text" type="text" placeholder="Search">
 				<img src="./Images/search-btn-image.png" id="search-btn">
 				<img src="./Images/share-btn-image.png" id="share-btn">
+                <asp:Button ID="adminBtn" runat="server" Text="Admin"  OnClick="AdminBtn_Onclick"/>
 				
 				<div class="big-header">
 					<span class="big-header-text">Mission</span> |
@@ -174,7 +174,6 @@
 			</div>			
 		</div>		
 		<script type="text/javascript" src="./Script.js"></script>
-	</body>
     </form>
 </body>
 </html>
