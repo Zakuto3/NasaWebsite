@@ -345,6 +345,8 @@ span.article-text:hover .article-text-flow{
 }
 
 .adminPage-form {
+    opacity: 0.85;
+    border-radius: 15px;
     background: #3c4965;
     height: 70%;
     position: absolute;
