@@ -323,15 +323,18 @@ span.article-text:hover .article-text-flow{
     /*padding: 0px;*/
 }
 
+.btn {
+    background: #525252;
+    border-width: 0px;
+    color: white;
+}
+
 #adminBtn {
     position: absolute;
     right: 9.2%;
     bottom: 0%;
     width: 70px;
     height: 40px;
-    background: #525252;
-    border-width: 0px;
-    color: white;
 }
 
 #adminPage-content {
@@ -353,4 +356,32 @@ span.article-text:hover .article-text-flow{
     width: 67%;
     top: 15%;
     left: 17%;
+}
+
+.textbox {
+    background: #0000008a;
+    color: white;
+    border-width: 0px;
+    border-radius: 2px;
+}
+
+#title-box {
+    position: absolute;
+    top: 11%;
+    left: 32%;
+    color: whitesmoke;
+}
+
+#paragraph-box {
+    position: absolute;
+    top: 24%;
+    left: 32%;
+    color: whitesmoke;
+}
+
+#upload-box {
+    position: absolute;
+    top: 60%;
+    left: 32%;
+    color: whitesmoke;
 }

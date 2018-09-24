@@ -11,9 +11,21 @@
     <form id="form1" runat="server">
         <div id="adminPage-content">
             <div class="adminPage-form">
-                 <input type="text" />
-                 <input type="text" />
-                 <textarea></textarea>
+                <h3>Fill in the form</h3>
+                <div>
+                    <div id="title-box">
+                        Enter Title <br /> <asp:TextBox TextMode="SingleLine" runat="server" ID="titleTextBox" CssClass="textbox"></asp:TextBox>
+                    </div>
+                    <div id="paragraph-box">
+                        Enter paragraph <br /> <asp:TextBox TextMode="MultiLine" runat="server" ID="paragraphBox" CssClass="textbox"></asp:TextBox>
+                    </div>
+                    <div id="upload-box">
+                        Upload image or video <br /><asp:FileUpload ID="uploader" CssClass="textbox" runat="server" /><br />
+                <asp:Button ID="uploadbtn" CssClass="btn" runat="server" Text="Upload"  OnClick="uploadbtn_Click"/>
+                    </div>
+                
+
+                </div>
             </div>
             
          </div>

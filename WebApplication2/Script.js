@@ -7,7 +7,7 @@ function Slider() {
 		let children = Array.from(eles.children);
 		let showed = false;
 		children.forEach(function(curr){
-			console.log('curr', curr);
+			//console.log('curr', curr);
 			if(curr.classList.contains('slide-show')){
 				curr.classList.add('slide-close');
 				curr.classList.remove('slide-show');
