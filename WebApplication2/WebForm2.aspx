@@ -17,12 +17,12 @@
                         Enter Title <br /> <asp:TextBox TextMode="SingleLine" runat="server" ID="titleTextBox" CssClass="textbox"></asp:TextBox>
                     </div>
                     <div id="paragraph-box">
-                        Enter paragraph <br /> <asp:TextBox TextMode="MultiLine" runat="server" ID="paragraphBox" CssClass="textbox"></asp:TextBox>
+                        Enter paragraph <br /> <asp:TextBox TextMode="MultiLine" runat="server" ID="paragraphTextBox" CssClass="textbox"></asp:TextBox>
                     </div>
                     <div id="upload-box">
                         Upload image or video <br /><asp:FileUpload ID="uploader" CssClass="textbox" runat="server" /><br />
-                <asp:Button ID="uploadbtn" CssClass="btn" runat="server" Text="Upload"  OnClick="uploadbtn_Click"/>
                     </div>
+                    <asp:Button ID="uploadbtn" CssClass="btn" runat="server" Text="Submit"  OnClick="uploadbtn_Click"/>
                 
 
                 </div>

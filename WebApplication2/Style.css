@@ -385,3 +385,22 @@ span.article-text:hover .article-text-flow{
     left: 32%;
     color: whitesmoke;
 }
+
+#paragraphTextBox {
+    width: 153%;
+    height: 150px;
+    resize: none;
+}
+
+#titleTextBox {
+    width: 165%;
+}
+
+#uploadbtn {
+    position: absolute;
+    left: 45%;
+    bottom: 10%;
+    border: outset;
+    width: 90px;
+    height: 40px;
+}

@@ -40,7 +40,7 @@
 			</div>
 			
 			<div class="wrapper">			
-				<div class="size-4-cell">
+				<div class="size-4-cell" id="slider" runat="server">
 					<div id="scroll-slide"  class="slide-show">
 						<span class="cell-text" style="padding: 0% 0% 5% 2%">
 							<span class="title">ARE WE ALONE IN THE UNIVERSE?</span>
