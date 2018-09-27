@@ -129,6 +129,7 @@ body{
     padding-right: 0px;
     opacity: 1;
     transition: all 1s ease;
+    z-index: 10;
 }
 
 .slide-close{
@@ -137,6 +138,7 @@ body{
     padding-left: 100%;
     opacity: 0;
     transition: all 1s ease;
+    z-index: 0;
 }
 
 .slide-closed{
@@ -145,6 +147,7 @@ body{
     padding-left: 0px;
     padding-right: 100%;
     opacity: 0;
+    z-index: 0;
 }
 
 .woofer-cell{

@@ -37,6 +37,9 @@ namespace WebApplication2
             NewDiv.ID = "scroll-slide";
             NewDiv.Attributes.Add("class", "slide-close");
 
+            HtmlGenericControl Link = new HtmlGenericControl("A");
+            Link.Attributes.Add("Href", "Https://www.google.com");
+
             HtmlGenericControl TextSpan = new HtmlGenericControl("SPAN");
             TextSpan.Attributes.Add("class", "cell-text");
             TextSpan.Style.Add(HtmlTextWriterStyle.Padding, "0% 0% 5% 2%");
@@ -55,8 +58,9 @@ namespace WebApplication2
 
             TextSpan.Controls.Add(Title);
             TextSpan.Controls.Add(Paragraph);
-            NewDiv.Controls.Add(TextSpan);
-            NewDiv.Controls.Add(img);
+            Link.Controls.Add(TextSpan);
+            Link.Controls.Add(img);
+            NewDiv.Controls.Add(Link);
             slider.Controls.Add(NewDiv);
         }
     }
