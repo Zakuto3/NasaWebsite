@@ -28,7 +28,7 @@ namespace WebApplication2
 
        protected void AdminBtn_Onclick(object sender, EventArgs e)
        {
-            Response.Redirect("WebForm2.aspx"); // Go to AdminPage
+            Response.Redirect("Admin.aspx"); // Go to AdminPage
        }
 
         private void CreateNews(News item)

@@ -30,7 +30,7 @@ namespace WebApplication2
                 uploader.SaveAs(Server.MapPath("~\\Images\\") + uploader.FileName);
                 news.Add(new News(titleTextBox.Text, paragraphTextBox.Text, "./Images/"+uploader.FileName));
                 Session["files"] = news;
-                Response.Redirect("WebForm1.aspx"); //Go to Main
+                Response.Redirect("Main.aspx"); //Go to Main
             }
         }
     }
