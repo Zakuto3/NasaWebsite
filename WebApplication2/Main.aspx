@@ -12,7 +12,7 @@
 		<div id="content">
 			<div id='main-header'>
 				
-				<img id="logo" src="Images/Logo.jpg">
+				<a href="Main.aspx"><img id="logo" src="Images/Logo.jpg"></a>
 				<input id="search-text" type="text" placeholder="Search">
 				<img src="./Images/search-btn-image.png" id="search-btn">
 				<img src="./Images/share-btn-image.png" id="share-btn">

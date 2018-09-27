@@ -33,5 +33,10 @@ namespace WebApplication2
                 Response.Redirect("Main.aspx"); //Go to Main
             }
         }
+
+        protected void adminBtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Admin.aspx"); // Go to AdminPage
+        }
     }
 }
