@@ -386,6 +386,12 @@ span.article-text:hover .article-text-flow{
     text-align: center;
 }
 
+.contentPage-image {
+    margin: 0% 19%;
+    width: 64%;
+    height: 300px;
+}
+
 .textbox {
     background: #0000008a;
     color: white;

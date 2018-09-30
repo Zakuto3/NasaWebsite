@@ -52,10 +52,11 @@ namespace WebApplication2
 
             HtmlGenericControl Paragraph = new HtmlGenericControl("SPAN");
             Paragraph.Attributes.Add("class", "promoted-article-text");
-            Paragraph.InnerText = item.Paragraph;
+            Paragraph.InnerText = (item.Paragraph.Length <= 40) ? item.Paragraph : item.Paragraph.Substring(0,40)+"...";
 
             HtmlGenericControl img = new HtmlGenericControl("IMG");
-            img.Attributes.Add("src", item.src);
+            string image = GetFileInfo.IsPhoto(item.src) ? item.src : "./Images/defaultplay.png";
+            img.Attributes.Add("src", image);
             img.Attributes.Add("class", "images");
 
             TextSpan.Controls.Add(Title);

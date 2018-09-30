@@ -39,9 +39,14 @@
 				</div>
 			</div>         
          </div>
-        <div class="adminPage-form"> <!--why cant it run contentPage-form class?-->
+        <div class="contentPage-form"> <!--why cant it run contentPage-form class?-->
             <h3 runat="server" id="ContentTitle"></h3>
-            <img runat="server" id="ContentSrc" src="#" style=" margin: 0% 19% ;width: 64%; height: 300px;"/>
+            <img runat="server" id="ContentImg" src="#" class="contentPage-image" style="display:none"/>
+            <video runat="server" id="ContentVid" controls="controls" class="contentPage-image" style="display:none">
+                <source src="/Images/cameradoggo.mp4" type="video/mp4" />
+                <source src="/Images/cameradoggo.mp4.webm" type="video/webm" />
+                <source src="/Images/cameradoggo.mp4.ogv" type="video/ogg" />
+            </video>
             <h1 runat="server" id="ContentParagraph"></h1>         
         </div>
     </form>

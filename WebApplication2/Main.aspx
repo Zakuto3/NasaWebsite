@@ -9,8 +9,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-		<div id="content">
-
+		<div id="content">        
 			<div id='main-header'>
 				
 				<a href="Main.aspx"><img id="logo" src="Images/Logo.jpg"></a>

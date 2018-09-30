@@ -18,8 +18,17 @@ namespace WebApplication2
                 {
                     List<News> news = (List<News>)Session["files"];
                     ContentTitle.InnerHtml = news[index].Title;
-                    ContentSrc.Src = news[index].src;
                     ContentParagraph.InnerHtml = news[index].Paragraph;
+                    if (GetFileInfo.IsPhoto(news[index].src))
+                    {
+                        ContentImg.Src = news[index].src;
+                        ContentImg.Style.Add("display", "block");
+                    }
+                    else
+                    {
+                        ContentVid.Src = news[index].src;
+                        ContentVid.Style.Add("display", "block");
+                    }                   
                 }
             }            
         }
