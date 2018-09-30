@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoginPage.aspx.cs" Inherits="WebApplication2.LoginPage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" ValidateRequest="true" CodeBehind="LoginPage.aspx.cs" Inherits="WebApplication2.LoginPage" %>
 
 <!DOCTYPE html>
 
@@ -40,14 +40,20 @@
 				</div>
 			</div>       
             <div class="loginPage-form">
+                <asp:Panel runat="server" DefaultButton="loginbtn"> <%--Triggers loginbtn Onclick when "enter" is pressed--%>
+                    <div class="loginforms">
+                        
+                        Enter Name <br/> <asp:TextBox ID="LoginName" TextMode="SingleLine" runat="server" CssClass="textbox"></asp:TextBox>
+                        <asp:RequiredFieldValidator runat="server" ControlToValidate="LoginName" ErrorMessage="Username required" CssClass="errormsg">
+                        </asp:RequiredFieldValidator><br/>
+                        
+                        Enter Password <br/> <asp:TextBox ID="LoginPass" TextMode="password" runat="server" CssClass="textbox"></asp:TextBox> 
+                        <asp:RequiredFieldValidator runat="server" ControlToValidate="LoginPass" ErrorMessage="Password required" CssClass="errormsg">
+                        </asp:RequiredFieldValidator>
+                   </div>
 
-                <div class="loginforms">
-                    Enter Name <br/> <asp:TextBox ID="LoginName" TextMode="SingleLine" runat="server" CssClass="textbox"></asp:TextBox><br/>
-
-                    Enter Password <br/> <asp:TextBox ID="LoginPass" TextMode="password" runat="server" CssClass="textbox"></asp:TextBox>            
-               </div>
-
-                <asp:Button ID="loginbtn" CssClass="btn" runat="server" Text="Login"  OnClick="loginBtn_Click"/>
+                    <asp:Button ID="loginbtn" CssClass="btn" runat="server" Text="Login"  OnClick="loginBtn_Click"/>
+                </asp:Panel>
             </div>
         </div>
     </form>

@@ -11,6 +11,7 @@ namespace WebApplication2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (Session["login"] != null)
             {
                 if ((bool)Session["login"])
@@ -32,8 +33,12 @@ namespace WebApplication2
 
         protected void loginBtn_Click(object sender, EventArgs e)
         {
-            Session["login"] = true;
-            Response.Redirect("Admin.aspx");
+            Page.Validate();
+            if (Page.IsValid)
+            {
+                Session["login"] = true;
+                Response.Redirect("Admin.aspx");
+            }
         }
 
         protected void adminBtn_Click(object sender, EventArgs e)

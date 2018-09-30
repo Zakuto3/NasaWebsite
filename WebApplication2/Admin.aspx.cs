@@ -13,7 +13,10 @@ namespace WebApplication2
         List<News> news;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Session["files"] != null)
+            //Prevent "enter" from submitting form
+            titleTextBox.Attributes.Add("onkeydown", "return (event.keyCode!=13);");
+
+            if (Session["files"] != null)
             {
                 news = (List<News>)Session["files"];
             }

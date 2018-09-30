@@ -43,13 +43,20 @@
                 <h3>Fill in the form</h3>
                 <div>
                     <div id="title-box">
-                        Enter Title <br /> <asp:TextBox TextMode="SingleLine" runat="server" ID="titleTextBox" CssClass="textbox"></asp:TextBox>
+                        Enter Title 
+                        <asp:RequiredFieldValidator runat="server" ControlToValidate="titleTextBox" ErrorMessage="Title required" CssClass="errormsg">
+                        </asp:RequiredFieldValidator><br /> 
+                        <asp:TextBox TextMode="SingleLine" runat="server" ID="titleTextBox" CssClass="textbox"></asp:TextBox>
                     </div>
                     <div id="paragraph-box">
-                        Enter paragraph <br /> <asp:TextBox TextMode="MultiLine" runat="server" ID="paragraphTextBox" CssClass="textbox"></asp:TextBox>
+                        Enter paragraph 
+                        <asp:CustomValidator runat="server" ClientValidationFunction="validatePara" ErrorMessage="At least 10 characters required" CssClass="errormsg">
+                        </asp:CustomValidator><br /> 
+                        <asp:TextBox TextMode="MultiLine" runat="server" ID="paragraphTextBox" CssClass="textbox"></asp:TextBox>
                     </div>
                     <div id="upload-box">
-                        Upload image or video <br /><asp:FileUpload ID="uploader" CssClass="textbox" runat="server" /><br />
+                        Upload image or video
+                        <br /><asp:FileUpload ID="uploader" CssClass="textbox" runat="server" /><br />
                     </div>
                     <asp:Button ID="uploadbtn" CssClass="btn" runat="server" Text="Submit"  OnClick="uploadbtn_Click"/>
                 
@@ -59,5 +66,14 @@
             
          </div>
     </form>
+    <script>
+        function validatePara(oSrc, args) {
+            let textbox = document.getElementById("paragraphTextBox");
+            if (textbox.value == "" || textbox.value.length < 10) {
+                args.IsValid = false;
+            }
+            return false;
+        }
+    </script>
 </body>
 </html>
