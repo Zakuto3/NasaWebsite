@@ -18,9 +18,11 @@ namespace WebApplication2
             if(Session["files"] != null)
             {
                 List<News> news = (List<News>)Session["files"];
+                int index = 0;
                 foreach (var item in news)
                 {
-                    CreateNews(item);
+                    CreateNews(item, index);
+                    index++;
                 }             
             }
         }
@@ -31,14 +33,14 @@ namespace WebApplication2
             Response.Redirect("Admin.aspx"); // Go to AdminPage
        }
 
-        private void CreateNews(News item)
+        private void CreateNews(News item, int index)
         {
             HtmlGenericControl NewDiv = new HtmlGenericControl("DIV");
             NewDiv.ID = "scroll-slide";
             NewDiv.Attributes.Add("class", "slide-close");
 
             HtmlGenericControl Link = new HtmlGenericControl("A");
-            Link.Attributes.Add("Href", "Https://www.google.com");
+            Link.Attributes.Add("Href", "ContentPage.aspx?index="+index+"");
 
             HtmlGenericControl TextSpan = new HtmlGenericControl("SPAN");
             TextSpan.Attributes.Add("class", "cell-text");

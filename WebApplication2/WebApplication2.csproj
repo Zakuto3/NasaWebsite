@@ -68,6 +68,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ContentPage.aspx" />
     <Content Include="Images\4cell.JPG" />
     <Content Include="Images\9bc.jpg" />
     <Content Include="Images\banana2.jpg" />
@@ -82,6 +83,7 @@
     <Content Include="Images\Pink-doggo.png" />
     <Content Include="Images\pugdoggo.jpg" />
     <Content Include="Images\Rewoofed.png" />
+    <Content Include="Images\ripdoggo.jpg" />
     <Content Include="Images\Search-btn-image.png" />
     <Content Include="Images\seconddog.jpg" />
     <Content Include="Images\Share-btn-image.png" />
@@ -96,6 +98,13 @@
     <Content Include="Admin.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContentPage.aspx.cs">
+      <DependentUpon>ContentPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContentPage.aspx.designer.cs">
+      <DependentUpon>ContentPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="news.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Main.aspx.cs">
