@@ -470,9 +470,23 @@ span.article-text:hover .article-text-flow{
     width: 61%;
 }
 
+#category-box {
+    color: whitesmoke;
+    position: absolute;
+    left: 55%;
+    bottom: 43%;
+}
+
+#keywords-box {
+    color: whitesmoke;
+    position: absolute;
+    left: 25%;
+    bottom: 29%;
+}
+
 #upload-box {
     position: absolute;
-    top: 51%;
+    bottom: 20%;
     left: 28%;
     color: whitesmoke;
 }
@@ -490,7 +504,7 @@ span.article-text:hover .article-text-flow{
 #uploadbtn {
     position: absolute;
     left: 42%;
-    bottom: 30%;
+    bottom: 8%;
     /*border: outset;*/
     width: 90px;
     height: 40px;

@@ -54,8 +54,9 @@
                         </asp:CustomValidator><br /> 
                         <asp:TextBox TextMode="MultiLine" runat="server" ID="paragraphTextBox" CssClass="textbox"></asp:TextBox>
                     </div>
-                    <div>
-                        <asp:DropDownList ID="categorylist" runat="server">
+                    <div id="category-box">
+                        Select a category<br />
+                        <asp:DropDownList ID="categorylist" CssClass="textbox" runat="server">
                             <asp:listitem>Just space news!</asp:listitem>
                             <asp:ListItem>Astrophysics</asp:ListItem>
                             <asp:listitem>Doggos</asp:listitem>
@@ -63,8 +64,9 @@
                             <asp:listitem>Space Travel</asp:listitem>
                         </asp:DropDownList>
                     </div>
-                    <div>
-                        <asp:CheckBoxList ID="keywordslist" runat="server">
+                    <div id="keywords-box">
+                        Select keywords<br />
+                        <asp:CheckBoxList ID="keywordslist"  CssClass="textbox" runat="server">
                             <asp:ListItem>Doggos</asp:ListItem>
                             <asp:ListItem>Space</asp:ListItem>
                             <asp:ListItem>Star</asp:ListItem>

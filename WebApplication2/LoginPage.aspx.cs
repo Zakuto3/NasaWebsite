@@ -33,12 +33,8 @@ namespace WebApplication2
 
         protected void loginBtn_Click(object sender, EventArgs e)
         {
-            Page.Validate();
-            if (Page.IsValid)
-            {
-                Session["login"] = true;
-                Response.Redirect("Admin.aspx");
-            }
+            Session["login"] = true;
+            Response.Redirect("Admin.aspx");
         }
 
         protected void adminBtn_Click(object sender, EventArgs e)
