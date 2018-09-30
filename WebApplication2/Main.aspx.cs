@@ -59,6 +59,14 @@ namespace WebApplication2
             Title.Attributes.Add("class", "title");
             Title.InnerText = item.Title;
 
+            HtmlGenericControl Keywords = new HtmlGenericControl("SPAN");
+            Keywords.Attributes.Add("class", "keywords");
+            Keywords.InnerText = item.Keywords;
+
+            HtmlGenericControl Category = new HtmlGenericControl("SPAN");
+            Category.Attributes.Add("class", "category");
+            Category.InnerText = item.Category;
+
             HtmlGenericControl Paragraph = new HtmlGenericControl("SPAN");
             Paragraph.Attributes.Add("class", "promoted-article-text");
             Paragraph.InnerText = (item.Paragraph.Length <= 40) ? item.Paragraph : item.Paragraph.Substring(0,40)+"...";
@@ -70,6 +78,8 @@ namespace WebApplication2
 
             TextSpan.Controls.Add(Title);
             TextSpan.Controls.Add(Paragraph);
+            Link.Controls.Add(Keywords);
+            Link.Controls.Add(Category);
             Link.Controls.Add(TextSpan);
             Link.Controls.Add(img);
             NewDiv.Controls.Add(Link);

@@ -40,7 +40,7 @@ namespace WebApplication2
             if (uploader.HasFile)
             {
                 uploader.SaveAs(Server.MapPath("~\\Images\\") + uploader.FileName);
-                news.Add(new News(titleTextBox.Text, paragraphTextBox.Text, "./Images/"+uploader.FileName));
+                news.Add(new News(titleTextBox.Text, paragraphTextBox.Text, "./Images/"+uploader.FileName, categorylist.Text, getKeywords()));
                 Session["files"] = news;
                 Response.Redirect("Main.aspx"); //Go to Main
             }
@@ -57,6 +57,23 @@ namespace WebApplication2
             logoutBtn.Style.Add(HtmlTextWriterStyle.Display, "none");
             adminBtn.Text = "Log in";
             Response.Redirect("Main.aspx");
+        }
+
+       protected string getKeywords()
+        {
+            string keywords = "";
+            foreach (ListItem item in keywordslist.Items)
+            {
+                if (item.Selected) keywords += item+",";
+            }
+            if(keywords != "")
+            {
+                return keywords.Remove(keywords.LastIndexOf(","));
+            }
+            else
+            {
+                return "";
+            }
         }
     }
 }

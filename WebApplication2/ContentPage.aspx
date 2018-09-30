@@ -39,15 +39,17 @@
 					<span class="small-header-text">Benefits to You</span>
 				</div>
 			</div>       
-              <div class="contentPage-form"> 
-            <h3 runat="server" id="ContentTitle"></h3>
-            <img runat="server" id="ContentImg" src="#" class="contentPage-image" style="display:none"/>
-            <video runat="server" id="ContentVid" controls="controls" class="contentPage-image" style="display:none">
+            <div class="contentPage-form"> 
+                <h3 runat="server" id="ContentTitle"></h3>
+                <span runat="server" id="keywords" class="keywords"></span>
+                <span runat="server" id="category" class="category"></span>
+                <img runat="server" id="ContentImg" src="#" class="contentPage-image" style="display:none"/>
+                <video runat="server" id="ContentVid" controls="controls" class="contentPage-image" style="display:none">
                 <source src="/Images/cameradoggo.mp4" type="video/mp4" />
                 <source src="/Images/cameradoggo.mp4.webm" type="video/webm" />
                 <source src="/Images/cameradoggo.mp4.ogv" type="video/ogg" />
-            </video>
-            <h1 runat="server" id="ContentParagraph"></h1>         
+                </video>
+                <h1 runat="server" id="ContentParagraph"></h1>         
             </div>
          </div>
         

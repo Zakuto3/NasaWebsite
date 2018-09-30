@@ -12,15 +12,19 @@ namespace WebApplication2
 
     public class News
     {
-        public News(string title, string paragraph, string source)
+        public News(string title, string paragraph, string source, string category, string keywords)
         {
             Title = title;
             Paragraph = paragraph;
             src = source;
+            Category = category;
+            Keywords = keywords;
         }
         public string Title;
         public string Paragraph;
         public string src;
+        public string Category;
+        public string Keywords;
     }
 
     public class GetFileInfo

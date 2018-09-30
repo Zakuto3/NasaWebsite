@@ -18,6 +18,8 @@ namespace WebApplication2
                 {
                     List<News> news = (List<News>)Session["files"];
                     ContentTitle.InnerHtml = news[index].Title;
+                    keywords.InnerHtml = news[index].Keywords;
+                    category.InnerHtml = news[index].Category;
                     ContentParagraph.InnerHtml = news[index].Paragraph.Replace("\n","<br>"); //Newlines did not show
                     if (GetFileInfo.IsPhoto(news[index].src))
                     {
