@@ -348,6 +348,15 @@ span.article-text:hover .article-text-flow{
     height: 40px;
 }
 
+#logoutBtn {
+    position: absolute;
+    bottom: 0%;
+    width: 70px;
+    height: 40px;
+    display: none;
+    right: 3.4%;
+}
+
 #adminPage-content {
     margin: 0% 15%;
 }
@@ -385,6 +394,7 @@ span.article-text:hover .article-text-flow{
     background-image: url(Images/ripdoggo.jpg);
     background-size: cover;
     background-position: center;
+    overflow-y: auto;
 }
 
 .contentPage-form h3 {
@@ -399,6 +409,15 @@ span.article-text:hover .article-text-flow{
     width: 64%;
     height: 300px;
 }
+
+#ContentParagraph {
+    color: white;
+    background: #0000009e;
+    font-size: 22px;
+    font-family: serif;
+    padding: 2% 5%;
+}
+
 .loginPage-form {
     opacity: 0.85;
     border-radius: 15px;
@@ -406,7 +425,7 @@ span.article-text:hover .article-text-flow{
     height: 27%;
     position: absolute;
     width: 17%;
-    top: 5%;
+    top: 17%;
     left: 40%;
     background-image: url(Images/ripdoggo.jpg);
     background-size: cover;
@@ -414,11 +433,11 @@ span.article-text:hover .article-text-flow{
 }
 
 .loginforms{
-position: absolute;
-top: 20%;
-left: 20%;
-text-align: -webkit-center;
-background: #859eb3;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    text-align: -webkit-center;
+    background: #859eb3;
 }
 .textbox {
     background: #0000008a;

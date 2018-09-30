@@ -16,7 +16,8 @@
 				<input id="search-text" type="text" placeholder="Search">
 				<img src="./Images/search-btn-image.png" id="search-btn">
 				<img src="./Images/share-btn-image.png" id="share-btn">
-                <asp:Button ID="adminBtn" CssClass="btn" runat="server" Text="Admin"  OnClick="adminBtn_Click"/>
+                <asp:Button ID="adminBtn" CssClass="btn" runat="server" Text="Log in"  OnClick="adminBtn_Click"/>
+                <asp:Button ID="logoutBtn" CssClass="btn" runat="server" Text="Log out"  OnClick="logoutBtn_Click"/>
 				
 				<div class="big-header">
 					<span class="big-header-text">Mission</span> |
@@ -37,9 +38,8 @@
 					<span class="small-header-text">History</span> |
 					<span class="small-header-text">Benefits to You</span>
 				</div>
-			</div>         
-         </div>
-        <div class="contentPage-form"> <!--why cant it run contentPage-form class?-->
+			</div>       
+              <div class="contentPage-form"> 
             <h3 runat="server" id="ContentTitle"></h3>
             <img runat="server" id="ContentImg" src="#" class="contentPage-image" style="display:none"/>
             <video runat="server" id="ContentVid" controls="controls" class="contentPage-image" style="display:none">
@@ -48,7 +48,9 @@
                 <source src="/Images/cameradoggo.mp4.ogv" type="video/ogg" />
             </video>
             <h1 runat="server" id="ContentParagraph"></h1>         
-        </div>
+            </div>
+         </div>
+        
     </form>
 </body>
 </html>

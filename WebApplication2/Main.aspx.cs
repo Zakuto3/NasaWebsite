@@ -25,10 +25,19 @@ namespace WebApplication2
                     index++;
                 }             
             }
+
+            if (Session["login"] != null)
+            {
+                if ((bool)Session["login"])
+                {
+                    logoutBtn.Style.Add(HtmlTextWriterStyle.Display, "block");
+                    adminBtn.Text = "Admin";
+                }
+            }
         }
 
 
-       protected void AdminBtn_Onclick(object sender, EventArgs e)
+       protected void adminBtn_Click(object sender, EventArgs e)
        {
             Response.Redirect("LoginPage.aspx"); // Go to AdminPage
        }
@@ -65,6 +74,13 @@ namespace WebApplication2
             Link.Controls.Add(img);
             NewDiv.Controls.Add(Link);
             slider.Controls.Add(NewDiv);
+        }
+
+        protected void logoutBtn_Click(object sender, EventArgs e)
+        {
+            Session["login"] = false;
+            logoutBtn.Style.Add(HtmlTextWriterStyle.Display, "none");
+            adminBtn.Text = "Log in";
         }
     }
 }

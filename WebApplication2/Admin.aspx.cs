@@ -21,6 +21,15 @@ namespace WebApplication2
             {
                 news = new List<News>();
             }
+
+            if (Session["login"] != null)
+            {
+                if ((bool)Session["login"])
+                {
+                    logoutBtn.Style.Add(HtmlTextWriterStyle.Display, "block");
+                    adminBtn.Text = "Admin";
+                }
+            }
         }
 
         protected void uploadbtn_Click(object sender, EventArgs e)
@@ -37,6 +46,14 @@ namespace WebApplication2
         protected void adminBtn_Click(object sender, EventArgs e)
         {
             Response.Redirect("Admin.aspx"); // Go to AdminPage
+        }
+
+        protected void logoutBtn_Click(object sender, EventArgs e)
+        {
+            Session["login"] = false;
+            logoutBtn.Style.Add(HtmlTextWriterStyle.Display, "none");
+            adminBtn.Text = "Log in";
+            Response.Redirect("Main.aspx");
         }
     }
 }

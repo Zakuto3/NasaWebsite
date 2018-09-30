@@ -18,7 +18,7 @@ namespace WebApplication2
                 {
                     List<News> news = (List<News>)Session["files"];
                     ContentTitle.InnerHtml = news[index].Title;
-                    ContentParagraph.InnerHtml = news[index].Paragraph;
+                    ContentParagraph.InnerHtml = news[index].Paragraph.Replace("\n","<br>"); //Newlines did not show
                     if (GetFileInfo.IsPhoto(news[index].src))
                     {
                         ContentImg.Src = news[index].src;
@@ -30,12 +30,28 @@ namespace WebApplication2
                         ContentVid.Style.Add("display", "block");
                     }                   
                 }
-            }            
+            }
+
+            if (Session["login"] != null)
+            {
+                if ((bool)Session["login"])
+                {
+                    logoutBtn.Style.Add(HtmlTextWriterStyle.Display, "block");
+                    adminBtn.Text = "Admin";
+                }
+            }
         }
 
         protected void adminBtn_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Admin.aspx"); // Go to AdminPage
+            Response.Redirect("LoginPage.aspx"); // Go to AdminPage
+        }
+
+        protected void logoutBtn_Click(object sender, EventArgs e)
+        {
+            Session["login"] = false;
+            logoutBtn.Style.Add(HtmlTextWriterStyle.Display, "none");
+            adminBtn.Text = "Log in";
         }
     }
 }
