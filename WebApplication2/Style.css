@@ -332,6 +332,14 @@ span.article-text:hover .article-text-flow{
     color: white;
 }
 
+#loginbtn {
+    position: absolute;
+    right: 38%;
+    bottom: 20%;
+    width: 70px;
+    height: 40px;
+}
+
 #adminBtn {
     position: absolute;
     right: 9.2%;
@@ -391,7 +399,27 @@ span.article-text:hover .article-text-flow{
     width: 64%;
     height: 300px;
 }
+.loginPage-form {
+    opacity: 0.85;
+    border-radius: 15px;
+    background: #3c4965;
+    height: 27%;
+    position: absolute;
+    width: 17%;
+    top: 5%;
+    left: 40%;
+    background-image: url(Images/ripdoggo.jpg);
+    background-size: cover;
+    background-position: right;
+}
 
+.loginforms{
+position: absolute;
+top: 20%;
+left: 20%;
+text-align: -webkit-center;
+background: #859eb3;
+}
 .textbox {
     background: #0000008a;
     color: white;

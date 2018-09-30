@@ -93,6 +93,7 @@
     <Content Include="Images\Woof-check.png" />
     <Content Include="Images\Woofer.png" />
     <Content Include="Images\wow.jpg" />
+    <Content Include="LoginPage.aspx" />
     <Content Include="Script.js" />
     <Content Include="Style.css" />
     <Content Include="Web.config" />
@@ -106,6 +107,13 @@
     </Compile>
     <Compile Include="ContentPage.aspx.designer.cs">
       <DependentUpon>ContentPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="news.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

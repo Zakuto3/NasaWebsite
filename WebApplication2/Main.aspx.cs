@@ -30,7 +30,7 @@ namespace WebApplication2
 
        protected void AdminBtn_Onclick(object sender, EventArgs e)
        {
-            Response.Redirect("Admin.aspx"); // Go to AdminPage
+            Response.Redirect("LoginPage.aspx"); // Go to AdminPage
        }
 
         private void CreateNews(News item, int index)
