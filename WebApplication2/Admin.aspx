@@ -16,8 +16,8 @@
 				<input id="search-text" type="text" placeholder="Search">
 				<img src="./Images/search-btn-image.png" id="search-btn">
 				<img src="./Images/share-btn-image.png" id="share-btn">
-                <asp:Button ID="adminBtn" CssClass="btn" runat="server" Text="Log in"  OnClick="adminBtn_Click"/>
-                <asp:Button ID="logoutBtn" CssClass="btn" runat="server" Text="Log out"  OnClick="logoutBtn_Click"/>
+                <asp:Button ID="adminBtn"  CausesValidation="false" CssClass="btn" runat="server" Text="Log in"  OnClick="adminBtn_Click"/>
+                <asp:Button ID="logoutBtn" CausesValidation="false" CssClass="btn" runat="server" Text="Log out"  OnClick="logoutBtn_Click"/>
 				
 				<div class="big-header">
 					<span class="big-header-text">Mission</span> |
@@ -91,7 +91,6 @@
             if (textbox.value == "" || textbox.value.length < 10) {
                 args.IsValid = false;
             }
-            return false;
         }
     </script>
 </body>

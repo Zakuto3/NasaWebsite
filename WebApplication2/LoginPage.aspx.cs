@@ -20,15 +20,6 @@ namespace WebApplication2
                 }
                 Session["login"] = false;
             }
-
-            if (Session["login"] != null)
-            {
-                if ((bool)Session["login"])
-                {
-                    logoutBtn.Style.Add(HtmlTextWriterStyle.Display, "block");
-                    adminBtn.Text = "Admin";
-                }
-            }
         }
 
         protected void loginBtn_Click(object sender, EventArgs e)

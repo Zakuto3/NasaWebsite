@@ -14,8 +14,8 @@ namespace WebApplication2
 
        protected void Page_Load(object sender, EventArgs e)
        {
-            
-            if(Session["files"] != null)
+
+            if (Session["files"] != null)
             {
                 List<News> news = (List<News>)Session["files"];
                 int index = 0;
