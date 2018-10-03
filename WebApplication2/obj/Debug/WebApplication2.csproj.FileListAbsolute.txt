@@ -230,3 +230,6 @@ C:\Users\Zak\Documents\Sublime Projects\WebLabs\WebApplication2\obj\Debug\WebApp
 C:\Users\Zak\Documents\Sublime Projects\WebLabs\WebApplication2\obj\Debug\WebApplication2.csproj.CopyComplete
 C:\Users\Zak\Documents\Sublime Projects\WebLabs\WebApplication2\obj\Debug\WebApplication2.dll
 C:\Users\Zak\Documents\Sublime Projects\WebLabs\WebApplication2\obj\Debug\WebApplication2.pdb
+C:\Users\Simon\Desktop\School\DVA231\WebLabs\WebApplication2\bin\MySql.Data.dll
+C:\Users\Simon\Desktop\School\DVA231\WebLabs\WebApplication2\bin\Google.Protobuf.dll
+C:\Users\Simon\Desktop\School\DVA231\WebLabs\WebApplication2\bin\MySql.Data.xml
