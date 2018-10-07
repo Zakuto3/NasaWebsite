@@ -30,7 +30,7 @@ function ajaxcall(search, resultList) {
                 clearResults(resultList); //clear list before adding new ones
                 news.forEach(function (value) {
                     let listItem = document.createElement("a");
-                    listItem.innerHTML = "<li style='margin-top: 4%;'>" + value + "</li>";
+                    listItem.innerHTML = "<li class='searchItem'>" + value + "</li>";
                     resultList.appendChild(listItem);
                 })
                 resultList.style.display = "block";
