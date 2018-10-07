@@ -30,7 +30,10 @@ function ajaxcall(search, resultList) {
                 clearResults(resultList); //clear list before adding new ones
                 news.forEach(function (value) {
                     let listItem = document.createElement("a");
-                    listItem.innerHTML = "<li class='searchItem'>" + value + "</li>";
+                    let mark1 = value.search(search.trim());    //String manip to get the markings in search
+                    let mark2 = mark1 + search.trim().length+1;
+                    let markString = value.substring(0, mark1) + "<mark>" + value.substring(mark1, mark2) + "</mark>" + value.substring(mark2, value.length);
+                    listItem.innerHTML = "<li class='searchItem'>" + markString + "</li>";
                     resultList.appendChild(listItem);
                 })
                 resultList.style.display = "block";
