@@ -76,6 +76,7 @@ namespace WebApplication2
             connection.Close();
             if (success == "0")
             {
+                Session["username"] = user;
                 return true;
             }
             return false;

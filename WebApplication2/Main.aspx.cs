@@ -15,7 +15,39 @@ namespace WebApplication2
 
        protected void Page_Load(object sender, EventArgs e)
        {
-            if (Session["files"] != null)
+            Debug.WriteLine("Start of connection");
+
+            string connectionString = "server=127.0.0.1;" +
+            "user id=Bimane;" +
+            "database=assignment3;" +
+            "port=3306;" +
+            "password=doggo21;" +
+            "pooling=true;";
+             
+            MySqlConnection connection = new MySqlConnection(connectionString);
+            try
+            {
+                connection.Open();
+                MySqlCommand command = new MySqlCommand("SELECT * FROM assignment3.content;", connection);
+                MySqlDataReader reader = command.ExecuteReader();
+
+                int index = 0;
+                while (reader.Read())
+                {
+                    CreateNews(reader, index);
+                    index++;
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+            }
+   
+            connection.Close();
+       
+
+            /*if (Session["files"] != null)
             {
                 List<News> news = (List<News>)Session["files"];
                 int index = 0;
@@ -33,16 +65,15 @@ namespace WebApplication2
                     logoutBtn.Style.Add(HtmlTextWriterStyle.Display, "block");
                     adminBtn.Text = "Admin";
                 }
-            }
+            }*/
         }
-
 
        protected void adminBtn_Click(object sender, EventArgs e)
        {
             Response.Redirect("LoginPage.aspx"); // Go to AdminPage
        }
 
-        private void CreateNews(News item, int index)
+        private void CreateNews(MySqlDataReader item, int index)
         {
             HtmlGenericControl NewDiv = new HtmlGenericControl("DIV");
             NewDiv.ID = "scroll-slide";
@@ -57,25 +88,25 @@ namespace WebApplication2
 
             HtmlGenericControl Title = new HtmlGenericControl("SPAN");
             Title.Attributes.Add("class", "title");
-            Title.InnerText = item.Title;
+            Title.InnerText = item["title"].ToString(); 
 
             HtmlGenericControl Keywords = new HtmlGenericControl("SPAN");
             Keywords.Attributes.Add("class", "keywords");
-            Keywords.InnerText = item.Keywords;
+            Keywords.InnerText = item["keywords"].ToString();
 
             HtmlGenericControl Category = new HtmlGenericControl("SPAN");
             Category.Attributes.Add("class", "category");
-            Category.InnerText = item.Category;
+            Category.InnerText = item["category"].ToString();
 
             HtmlGenericControl Paragraph = new HtmlGenericControl("SPAN");
             Paragraph.Attributes.Add("class", "promoted-article-text");
-            Paragraph.InnerText = (item.Paragraph.Length <= 40) ? item.Paragraph : item.Paragraph.Substring(0,40)+"...";
+            Paragraph.InnerText = (item["text"].ToString().Length <= 40) ? item["text"].ToString() : item["text"].ToString().Substring(0,40)+"...";
 
             HtmlGenericControl img = new HtmlGenericControl("IMG");
-            string image = GetFileInfo.IsPhoto(item.src) ? item.src : "./Images/defaultplay.png";
+            string image = GetFileInfo.IsPhoto(item["imgurl"].ToString()) ? "./Images/"+item["imgurl"].ToString() : "./Images/defaultplay.png";
             img.Attributes.Add("src", image);
             img.Attributes.Add("class", "images");
-
+            Debug.WriteLine(item["text"].ToString());
             TextSpan.Controls.Add(Title);
             TextSpan.Controls.Add(Paragraph);
             Link.Controls.Add(Keywords);

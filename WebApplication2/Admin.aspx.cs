@@ -40,7 +40,9 @@ namespace WebApplication2
             if (uploader.HasFile)
             {
                 uploader.SaveAs(Server.MapPath("~\\Images\\") + uploader.FileName);
+
                 news.Add(new News(titleTextBox.Text, paragraphTextBox.Text, "./Images/"+uploader.FileName, categorylist.Text, getKeywords()));
+
                 Session["files"] = news;
                 Response.Redirect("Main.aspx"); //Go to Main
             }
