@@ -92,5 +92,7 @@ namespace WebApplication2
             logoutBtn.Style.Add(HtmlTextWriterStyle.Display, "none");
             adminBtn.Text = "Log in";
         }
+
+        
     }
 }

@@ -29,6 +29,24 @@ body{
     text-indent: 10px;
 }
 
+#searchResults {
+    list-style: none;
+    position: absolute;
+    color: whitesmoke;
+    background: #333333;
+    top: 39%;
+    z-index: 100;
+    right: 9%;
+    width: 14%;
+    border-radius: 2px;
+    border: solid 1px whitesmoke;
+    font-size: 1.1em;
+    padding-bottom: .5%;
+    padding-inline-start: 1em;
+    padding-inline-end: 1em;
+    display: none;
+}
+
 #search-btn{
 	position: absolute;
     display: inline-block;
@@ -53,6 +71,7 @@ body{
     display: inline-block;
     padding: 0 5px;
     right: 23%;
+    top: 0%;
 }
 
 .big-header-text{

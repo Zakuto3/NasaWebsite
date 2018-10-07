@@ -69,6 +69,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AjaxReq.aspx" />
     <Content Include="ContentPage.aspx" />
     <Content Include="Images\4cell.JPG" />
     <Content Include="Images\9bc.jpg" />
@@ -95,7 +96,8 @@
     <Content Include="Images\Woofer.png" />
     <Content Include="Images\wow.jpg" />
     <Content Include="LoginPage.aspx" />
-    <Content Include="Script.js" />
+    <Content Include="Slider.js" />
+    <Content Include="Search.js" />
     <Content Include="Style.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -104,6 +106,13 @@
     <Content Include="Admin.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AjaxReq.aspx.cs">
+      <DependentUpon>AjaxReq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjaxReq.aspx.designer.cs">
+      <DependentUpon>AjaxReq.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ContentPage.aspx.cs">
       <DependentUpon>ContentPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
