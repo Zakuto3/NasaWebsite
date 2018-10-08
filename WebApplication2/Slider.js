@@ -1,6 +1,4 @@
 function Slider() {
-
-    debugger;
 	let cell = document.getElementsByClassName('size-4-cell');
 	cellContent = Array.from(cell);
 	cellContent.forEach(function(eles){
@@ -27,4 +25,4 @@ function Slider() {
     });
 }
 
-setInterval(Slider,2000);
+setInterval(Slider, 2000);

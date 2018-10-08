@@ -29,6 +29,33 @@ body{
     text-indent: 10px;
 }
 
+#searchResults {
+    list-style: none;
+    position: absolute;
+    color: whitesmoke;
+    background: #333333;
+    top: 39%;
+    z-index: 100;
+    right: 9%;
+    width: 16%;
+    border-radius: 2px;
+    border: solid 1px whitesmoke;
+    font-size: 1.1em;
+    padding-inline-start: 0;
+    display: none;
+}
+
+#searchResults li:hover{
+    background: black;
+}
+
+.searchItem {
+    padding-block-end: .2em;
+    padding-block-start: .2em;
+    padding-inline-end: 1em;
+    padding-inline-start: 1em;
+}
+
 #search-btn{
 	position: absolute;
     display: inline-block;
@@ -53,6 +80,7 @@ body{
     display: inline-block;
     padding: 0 5px;
     right: 23%;
+    top: 0%;
 }
 
 .big-header-text{

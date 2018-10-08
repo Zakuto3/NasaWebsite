@@ -13,7 +13,11 @@
             <div id='main-header'>
 				
 				<a href="Main.aspx"><img id="logo" src="Images/Logo.jpg"></a>
-				<input id="search-text" type="text" placeholder="Search">
+				<div id="search">                   
+				    <input id="search-text" type="text" placeholder="Search">
+                    <ul id="searchResults">
+                    </ul>
+                </div>
 				<img src="./Images/search-btn-image.png" id="search-btn">
 				<img src="./Images/share-btn-image.png" id="share-btn">
                 <asp:Button ID="adminBtn" CausesValidation="false" CssClass="btn" runat="server" Text="Log in"  OnClick="adminBtn_Click"/>
@@ -57,5 +61,6 @@
             </div>
         </div>
     </form>
+    <script type="text/javascript" src="./Search.js"></script>
 </body>
 </html>
