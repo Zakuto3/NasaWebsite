@@ -49,7 +49,8 @@
                 <source src="/Images/cameradoggo.mp4.webm" type="video/webm" />
                 <source src="/Images/cameradoggo.mp4.ogv" type="video/ogg" />
                 </video>
-                <h1 runat="server" id="ContentParagraph"></h1>         
+                <h1 runat="server" id="ContentParagraph"></h1>
+                <h4 runat="server" id="ContentuserID" style="bottom:0%; right:3%;     position: absolute;"></h4>
             </div>
          </div>
         

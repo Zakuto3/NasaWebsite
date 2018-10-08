@@ -17,9 +17,7 @@ namespace WebApplication2
             {             
                 int index;
                 if (Int32.TryParse(Request.QueryString["index"], out index))
-                {
-                    //List<News> news = (List<News>)Session["files"];
-
+                {   //Dont forget to change to 83.255.27.47   
                     string connectionString = "server=127.0.0.1;" +
                     "user id=Bimane;" +
                     "database=assignment3;" +
@@ -69,6 +67,7 @@ namespace WebApplication2
             keywords.InnerHtml = reader["keywords"].ToString();
             category.InnerHtml = reader["category"].ToString();
             ContentParagraph.InnerHtml = reader["text"].ToString().Replace("\n", "<br>"); //Newlines did not show
+            ContentuserID.InnerHtml = "created by : " + reader["username"].ToString();
             if (GetFileInfo.IsPhoto(reader["imgurl"].ToString()))
             {
                 ContentImg.Src = "./Images/" + reader["imgurl"].ToString();

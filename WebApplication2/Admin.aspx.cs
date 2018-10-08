@@ -1,30 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Data;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Diagnostics;
+using MySql.Data.MySqlClient;
 
 namespace WebApplication2
 {
     public partial class WebForm2 : System.Web.UI.Page
     {
-        List<News> news;
+        string connectionString = "server=127.0.0.1;" +
+            "user id=Bimane;" +
+            "database=assignment3;" +
+            "port=3306;" +
+            "password=doggo21;" +
+            "pooling=true;";
+
+    
         protected void Page_Load(object sender, EventArgs e)
         {
             //Prevent "enter" from submitting form
             titleTextBox.Attributes.Add("onkeydown", "return (event.keyCode!=13);");
-
-            if (Session["files"] != null)
-            {
-                news = (List<News>)Session["files"];
-            }
-            else
-            {
-                news = new List<News>();
-            }
-
+           
             if (Session["login"] != null)
             {
                 if ((bool)Session["login"])
@@ -39,12 +38,19 @@ namespace WebApplication2
         {
             if (uploader.HasFile)
             {
+                string keyword = getKeywords();
+                string usrname = (string)Session["username"];
                 uploader.SaveAs(Server.MapPath("~\\Images\\") + uploader.FileName);
 
-                news.Add(new News(titleTextBox.Text, paragraphTextBox.Text, "./Images/"+uploader.FileName, categorylist.Text, getKeywords()));
+                MySqlConnection connection = new MySqlConnection(connectionString);
+                MySqlCommand command = new MySqlCommand("CALL ADDcontent("+"'"+titleTextBox.Text+"','"+ paragraphTextBox.Text + "','" + uploader.FileName + "','" + categorylist.Text + "','" + keyword + "','" + usrname + "'" +");", connection);
 
-                Session["files"] = news;
+                command.Connection.Open();
+                command.ExecuteNonQuery();                        
+                command.Connection.Close();
+
                 Response.Redirect("Main.aspx"); //Go to Main
+
             }
         }
 

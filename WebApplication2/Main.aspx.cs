@@ -16,7 +16,7 @@ namespace WebApplication2
        protected void Page_Load(object sender, EventArgs e)
        {
             Debug.WriteLine("Start of connection");
-
+            //Dont forget to change to 83.255.27.47
             string connectionString = "server=127.0.0.1;" +
             "user id=Bimane;" +
             "database=assignment3;" +
@@ -43,29 +43,7 @@ namespace WebApplication2
             {
                 Debug.WriteLine(ex.ToString());
             }
-   
             connection.Close();
-       
-
-            /*if (Session["files"] != null)
-            {
-                List<News> news = (List<News>)Session["files"];
-                int index = 0;
-                foreach (var item in news)
-                {
-                    CreateNews(item, index);
-                    index++;
-                }             
-            }
-
-            if (Session["login"] != null)
-            {
-                if ((bool)Session["login"])
-                {
-                    logoutBtn.Style.Add(HtmlTextWriterStyle.Display, "block");
-                    adminBtn.Text = "Admin";
-                }
-            }*/
         }
 
        protected void adminBtn_Click(object sender, EventArgs e)
