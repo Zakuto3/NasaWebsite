@@ -4,16 +4,16 @@ body{
 }
 
 #content{
-	margin: 0% 15%;
+	margin: 0% 6%;
 }
 
-#main-header{
-	margin-bottom: 6px;
-	position: relative;
-	height: 105px;
-	background-image: url('Images/header-img.jpg');
-	background-size: cover;
-	background-position: left;
+#main-header {
+    margin-bottom: 6px;
+    position: relative;
+    height: 105px;
+    background-image: url('Images/header-img.jpg');
+    background-size: cover;
+    background-position: left;
 }
 
 #search-text{
@@ -27,6 +27,11 @@ body{
     height: 40px;
     color: white;
     text-indent: 10px;
+}
+
+mark {
+    background: #333333;
+    color: darkorange;
 }
 
 #searchResults {
@@ -54,6 +59,7 @@ body{
     padding-block-start: .2em;
     padding-inline-end: 1em;
     padding-inline-start: 1em;
+    color: whitesmoke;
 }
 
 #search-btn{

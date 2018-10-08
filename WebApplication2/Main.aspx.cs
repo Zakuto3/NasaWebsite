@@ -17,7 +17,7 @@ namespace WebApplication2
        {
             Debug.WriteLine("Start of connection");
             //Dont forget to change to 83.255.27.47
-            string connectionString = "server=127.0.0.1;" +
+            string connectionString = "server=83.255.27.47;" +
             "user id=Bimane;" +
             "database=assignment3;" +
             "port=3306;" +
@@ -30,12 +30,10 @@ namespace WebApplication2
                 connection.Open();
                 MySqlCommand command = new MySqlCommand("SELECT * FROM assignment3.content;", connection);
                 MySqlDataReader reader = command.ExecuteReader();
-
-                int index = 0;
+                
                 while (reader.Read())
                 {
-                    CreateNews(reader, index);
-                    index++;
+                    CreateNews(reader);
                 }
                 reader.Close();
             }
@@ -44,6 +42,15 @@ namespace WebApplication2
                 Debug.WriteLine(ex.ToString());
             }
             connection.Close();
+
+            if (Session["login"] != null)
+            {
+                if ((bool)Session["login"])
+                {
+                    logoutBtn.Style.Add(HtmlTextWriterStyle.Display, "block");
+                    adminBtn.Text = "Admin";
+                }
+            }
         }
 
        protected void adminBtn_Click(object sender, EventArgs e)
@@ -51,14 +58,14 @@ namespace WebApplication2
             Response.Redirect("LoginPage.aspx"); // Go to AdminPage
        }
 
-        private void CreateNews(MySqlDataReader item, int index)
+        private void CreateNews(MySqlDataReader item)
         {
             HtmlGenericControl NewDiv = new HtmlGenericControl("DIV");
             NewDiv.ID = "scroll-slide";
             NewDiv.Attributes.Add("class", "slide-close");
 
             HtmlGenericControl Link = new HtmlGenericControl("A");
-            Link.Attributes.Add("Href", "ContentPage.aspx?index="+index+"");
+            Link.Attributes.Add("Href", "ContentPage.aspx?index=" + item["id"].ToString());
 
             HtmlGenericControl TextSpan = new HtmlGenericControl("SPAN");
             TextSpan.Attributes.Add("class", "cell-text");

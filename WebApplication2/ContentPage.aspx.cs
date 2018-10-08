@@ -18,7 +18,7 @@ namespace WebApplication2
                 int index;
                 if (Int32.TryParse(Request.QueryString["index"], out index))
                 {   //Dont forget to change to 83.255.27.47   
-                    string connectionString = "server=127.0.0.1;" +
+                    string connectionString = "server=83.255.27.47;" +
                     "user id=Bimane;" +
                     "database=assignment3;" +
                     "port=3306;" +
@@ -29,18 +29,11 @@ namespace WebApplication2
                     try
                     {
                         connection.Open();
-                        MySqlCommand command = new MySqlCommand("SELECT * FROM assignment3.content;", connection);
+                        MySqlCommand command = new MySqlCommand("SELECT * FROM assignment3.content WHERE id="+index+";", connection);
                         MySqlDataReader reader = command.ExecuteReader();
 
-                        int count = 0;
-                        while (reader.Read())
-                        {
-                            if (count == index)
-                            {
-                                loadContent(reader);
-                            }
-                            count++;
-                        }
+                        reader.Read();
+                        loadContent(reader);
                         reader.Close();
                     }
                     catch (Exception ex)

@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -34,7 +34,7 @@ namespace WebApplication2
         protected string SearchDB(string search)
         {
             JavaScriptSerializer serializer = new JavaScriptSerializer();
-            List<string> result = new List<string>();
+            List<object> result = new List<object>();
             MySqlConnection conn = new MySqlConnection(connectionString);
 
             MySqlCommand cmd = new MySqlCommand("SearchTitle", conn);
@@ -45,7 +45,7 @@ namespace WebApplication2
             MySqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                result.Add((string)reader[0]);
+                result.Add(new { title = (string)reader[0], id = reader[1].ToString() });
             }
             reader.Close();
             conn.Close();

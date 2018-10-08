@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Diagnostics;
+using System.Security.Cryptography;
 
 namespace WebApplication2
 {
@@ -18,10 +19,10 @@ namespace WebApplication2
             "password=doggo21;" +
             "pooling=true;";
         
+        
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
             if (Session["login"] != null)
             {
                 if ((bool)Session["login"])
@@ -66,7 +67,8 @@ namespace WebApplication2
             MySqlCommand command = new MySqlCommand("CheckLogin", connection);
             command.CommandType = System.Data.CommandType.StoredProcedure;
             command.Parameters.AddWithValue("usr", user);
-            command.Parameters.AddWithValue("pwd", pass);
+            //Debug.WriteLine("hashcode: " + string.Join("",System.Text.Encoding.UTF8.GetBytes(pass)));
+            command.Parameters.AddWithValue("pwd", pass.GetHashCode().ToString());
 
             connection.Open();
             MySqlDataReader reader = command.ExecuteReader();

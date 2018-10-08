@@ -11,13 +11,12 @@ namespace WebApplication2
 {
     public partial class WebForm2 : System.Web.UI.Page
     {
-        string connectionString = "server=127.0.0.1;" +
+        string connectionString = "server=83.255.27.47;" +
             "user id=Bimane;" +
             "database=assignment3;" +
             "port=3306;" +
             "password=doggo21;" +
             "pooling=true;";
-
     
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -31,6 +30,13 @@ namespace WebApplication2
                     logoutBtn.Style.Add(HtmlTextWriterStyle.Display, "block");
                     adminBtn.Text = "Admin";
                 }
+                else{
+                    Response.Redirect("Main.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("Main.aspx");
             }
         }
 
