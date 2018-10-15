@@ -16,12 +16,12 @@ namespace WebApplication2
        protected void Page_Load(object sender, EventArgs e)
        {
             Debug.WriteLine("Start of connection");
-            //Dont forget to change to 83.255.27.47
-            string connectionString = "server=83.255.27.47;" +
+            //Dont forget to change to right IP
+            string connectionString = "server=---------;" +
             "user id=Bimane;" +
             "database=assignment3;" +
             "port=3306;" +
-            "password=doggo21;" +
+            "password=--------;" +
             "pooling=true;";
              
             MySqlConnection connection = new MySqlConnection(connectionString);

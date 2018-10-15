@@ -11,11 +11,11 @@ namespace WebApplication2
 {
     public partial class WebForm2 : System.Web.UI.Page
     {
-        string connectionString = "server=83.255.27.47;" +
+        string connectionString = "server=-------;" +
             "user id=Bimane;" +
             "database=assignment3;" +
             "port=3306;" +
-            "password=doggo21;" +
+            "password=-------;" +
             "pooling=true;";
     
         protected void Page_Load(object sender, EventArgs e)

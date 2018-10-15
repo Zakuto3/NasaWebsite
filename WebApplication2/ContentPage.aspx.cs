@@ -17,12 +17,12 @@ namespace WebApplication2
             {             
                 int index;
                 if (Int32.TryParse(Request.QueryString["index"], out index))
-                {   //Dont forget to change to 83.255.27.47   
-                    string connectionString = "server=83.255.27.47;" +
+                {   //Dont forget to change to right IP
+                    string connectionString = "server=-------;" +
                     "user id=Bimane;" +
                     "database=assignment3;" +
                     "port=3306;" +
-                    "password=doggo21;" +
+                    "password=-------;" +
                     "pooling=true;";
 
                     MySqlConnection connection = new MySqlConnection(connectionString);
